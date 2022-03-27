@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="menu", onclick="OpenMenu()">☰</div>
+            <h1>ABOUT GAYOUNG</h1>
+        </header>
+        <nav id="mySidebar">
+            <ul class = "sidebarbutton">
+                <li onclick="CloseMenu()"><a href="javascript:void(0)">Close Menu</a></li>
+                <li onclick="CloseMenu()"><a href="#aboutme">About</a></li>
+                <li onclick="CloseMenu()"><a href="#myWorks" >Work</a></li>
+                <li onclick="CloseMenu()"><a href="#education">Education</a></li>
+                <li onclick="CloseMenu()"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div id="aboutme">
+                <img src="images/main.jpg" alt="photo of gayoung">
+                <p>
+                    Hi! I'm <b>Gayoung Kim</b>. I'm majoring in computer programming and analysis in Conestoga college.<br>
+                    I have a heart of love and an interest of <b>Computer programming</b>.
+                </p>
+                <div class="aboutme2">
+                    <div>
+                        I'm from...<br>
+                        <b>KOREA</b>
+                    </div>
+                    <div>
+                        I want to be...<br>
+                        <b>A SOFTWARE DEVELOPER</b>
+                    </div>
+                    <div>
+                        The word that best describes me is...<br>
+                        <b>PASSIONATE</b>
+                    </div>
+                </div>
+            </div>
+
+            <div id="myWorks">
+                <div>
+                    <h2>MY WORKS</h2>
+                    <p>If you want to know more about my work, please click on it. </p>
+                </div>
+                <div id="work1" onclick="ShowSpecific(this.id)">
+                    <article class="photos">
+                        <img src="images/g1.jpg" alt="">
+                        <p>Practically Classifying UAVs Sound Using Convolutional Neural Networks</p>
+                    </article>
+                </div>
+                <div id="work2" onclick="ShowSpecific(this.id)">
+                    <article class="photos">
+                        <img src="images/g2.jpg" alt="">
+                        <p> The Mock IMO assembly<br>
+                            presentation of the agenda</p>
+                    </article>
+                </div>
+                <div id="work3" onclick="ShowSpecific(this.id)">
+                    <article class="photos">
+                        <img src="images/g3.jpg" alt="">
+                        <p>Purdue university<br>
+                            global talented student</p>
+                    </article>
+                </div>
+                <div id="work4" onclick="ShowSpecific(this.id)">
+                    <article class="photos">
+                        <img src="images/g4.jpg" alt="">
+                        <p> 3D Modeling - catia<br>
+                            cad/cam term project</p>
+                    </article>
+                </div>
+                <div id="work5" onclick="ShowSpecific(this.id)">
+                    <article class="photos">
+                        <img src="images/g5.jpg" alt="">
+                        <p> 3D Modeling - Creo <br>
+                            cad/cam term project</p>
+                    </article>
+                </div>
+                <div id="work6" onclick="ShowSpecific(this.id)">
+                    <article class="photos">
+                        <img src="images/g6.jpg" alt="">
+                        <p>A cheering app using cell-phone lights</p>
+                    </article>
+                </div>
+            </div>
+            <!-- modal section -->
+            <div id="modal">
+                <div>
+                    <img src="" alt="" id="modalImage">
+                    <p></p>
+                </div>
+            </div>
+            <div id="education">
+                <h2>Education</h2>
+                <div>
+                    - Daejeon Jeil High school, Korea 2008 - 2011<br>
+                    - Busan National University, Korea 2012 - 2014<br>
+                    <blockquote>Department of German Language and Literature, dropped out</blockquote>
+                    - Chungnam National University, Korea 2015 - 2019
+                    <blockquote>Bachelor of Engineering - Naval Architecture & Ocean Engineering<br>
+                                Interdisciplinary course for Computer Science and Engineering <br>
+                                I graduated third and received the Excellence Award
+                    </blockquote>
+                    - Conestoga College, Canada
+                    <blockquote>Computer Programming/Analysis</blockquote>
+
+
+                </div>
+            </div>
+            <div id="contact">
+                <h2>Contact</h2>
+                <p>If you want to communicate with me, click the icon.</p>
+                <a href="mailto:Gkim2832@conestogac.on.ca"><img src="images/mail.png" alt="mail"></a>
+                <a href="https://www.instagram.com/9ayoun9_0/"><img src="images/instagram.png" alt="instagram"></a>
+            </div>
+        </section>
+        <footer>
+            &copy;2022 Gayoung Kim 
+        </footer>
+    </div>
+    <script src="javascript/myScript.js"></script>
+</body>
+</html>

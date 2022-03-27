@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Neucha', cursive;
+}
+body{
+    background-color:#f3f1f1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header{
+    padding: 0 25px;
+    background-color:#f3f1f1;
+    color: black;  
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index:1;
+}
+header>div{
+    font-size: 3em;
+    float: left;
+    margin: 15px auto;
+}
+header>div:hover{
+    background-color: #e4e2de;
+    cursor: pointer;
+}
+header>h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+nav{
+    z-index:2;
+    width:18%;
+    min-width:300px;
+    height: 0; /* change this with Javascript*/
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: white;
+    transition: 0.5s;
+}
+nav>ul{
+    padding-top: 25px;
+    list-style-type: none; 
+    display: none;
+}
+nav>ul>li{
+    transition: 0.3s;
+    padding: 10px 0;
+}
+nav>ul>li:hover{
+    background-color: lightgray;
+}
+nav>ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+section{
+    margin-top: 5%;
+}
+#aboutme{
+    width: 70%;
+    margin: auto;
+    line-height: 1.6;
+    background-color: white;
+
+}
+#aboutme>img{
+    display:block;
+    width: 90%;
+    filter: grayscale(50%);
+    margin: 5px auto;
+}
+#aboutme>p{
+    color: black;
+    margin-top: 0;
+    padding: 18px;
+    text-align: center;
+    font-size: 1.15em;
+}
+#aboutme>p>b{
+    font-size: 1.2em;
+}
+.aboutme2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 70px;
+    padding-bottom: 30px;
+}
+.aboutme2 b{
+    font-size: 1.4em;
+}
+h2{
+    text-align: center;
+    text-decoration:underline;
+    font-size: 2em;
+}
+#myWorks{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:auto; 
+    grid-gap: 20px;
+}
+#myWorks>div:first-child{
+    grid-column: 1/4;
+    text-align: center;
+}
+.photos{
+    background: #fff;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.photos:hover{
+    transform : translateY(-2px);
+    transition: 0.3s;
+    box-shadow: 0 4px 5px rgba(0,0,0,.2);   
+}
+
+.photos>img{
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    
+}
+.photos>p{
+    margin-top: 0px;
+    display: inline;
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+}
+
+#modal{
+    display: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position:fixed;
+    left:0;
+    top:0;
+}
+#modal>div{
+    width: 70%;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: row;
+}
+#modal>div>img{
+    width: 60%;
+    height: 60%;
+}
+#modal>div>p{
+    color: white;
+    font-size: 1.3em;
+    padding-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#education{
+    background-image: url("../images/b1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70%;
+    margin: 50px auto;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+#education>div{
+    background-color: white;
+    width: 50%;
+    margin: 70px auto;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+blockquote{
+    margin-top: 0px;
+    font-size: 0.9em;
+}
+#contact{
+    text-align: center;
+}
+#contact img{
+    height: 100px;
+}
+footer{
+    text-align: center;
+    padding: 30px;
+    margin-top:20px
+}
+
+@media only screen and (max-width: 850px) {
+    #myWorks{
+        grid-template-columns: 1fr 1fr;
+    }
+    #myWorks>div:first-child{
+        grid-column: 1/3;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #myWorks{
+        grid-template-columns: 1fr;
+    }
+    #myWorks>div:first-child{
+        grid-column: 1/2;
+    }
+    #education>div{
+        width: 80%;
+        font-size: 1em;
+    }
+    blockquote{
+        font-size: 0.6em;
+    }
+    #aboutme>p{
+        font-size: 0.8em;
+    }
+    #aboutme>p>b{
+        font-size: 1em;
+    }
+    .aboutme2{
+        font-size: 0.8em;
+    }
+    .aboutme2 b{
+        font-size: 1.1em;
+    }
+    #modal>div>p{
+        font-size: 0.9em;
+    }
+}
